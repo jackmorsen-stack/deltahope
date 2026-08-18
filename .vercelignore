@@ -1,0 +1,7 @@
+# Dependencies are installed by Vercel automatically.
+node_modules
+.git
+.env
+data
+*.log
+.vercel

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employment Application Form — Form 127</title>
+  <meta name="description" content="Employment Application Web System — Form 127. Bilingual application portal.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230F172A'%3E%3Cpath d='M4 5h16v14H4z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/css/system.css">
+  <link rel="stylesheet" href="/assets/css/apply.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="start.apply">Skip to content</a>
+
+  <header class="app-header" id="app-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">
+          <img class="brand-img" src="/assets/img/logo.jpg" alt="Delta Hope" width="120" height="auto">
+        </span>
+        <div class="brand-text">
+          <strong data-i18n="app.name">Employment Application System</strong>
+          <span class="brand-code" data-i18n="app.form.code">Form 127</span>
+        </div>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="app-main">
+    <!-- ============ START / HERO VIEW ============ -->
+    <section class="view" id="view-start" aria-labelledby="start-title">
+      <div class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="start-card card hero-card" id="start-card">
+            <div class="hero-logo" id="hero-logo">
+              <img src="/assets/img/logo.jpg" alt="Delta Hope" width="460" height="auto">
+            </div>
+            <h1 id="start-title" data-i18n="start.title">Employment Application</h1>
+            <p class="start-sub muted" data-i18n="start.subtitle">Complete the application form to be considered for employment with our organization. All information is treated confidentially.</p>
+            <div class="start-actions">
+              <button type="button" class="btn btn-primary btn-lg" id="btn-start" data-i18n="start.apply">Start Application</button>
+              <button type="button" class="btn btn-outline btn-lg" id="btn-resume" style="display:none" data-i18n="start.view">Continue Application</button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="hero-scroll" id="hero-scroll" aria-label="Start your application">
+          <span class="cue-dot" aria-hidden="true"></span>
+          <span data-i18n="start.apply">Start Application</span>
+        </button>
+      </div>
+
+      <!-- Landing band — why apply -->
+      <div class="landing container">
+        <div class="landing-head">
+          <h2 data-i18n="landing.title">A guided, secure application experience</h2>
+          <p data-i18n="landing.sub">Seven structured steps capture everything we need to consider your application — quickly, confidentially and on any device.</p>
+        </div>
+        <div class="landing-grid">
+          <article class="land-feature" data-reveal>
+            <span class="land-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <h3 data-i18n="landing.f1t">Secure &amp; confidential</h3>
+            <p data-i18n="landing.f1d">Your data is protected, encrypted in transit and only visible to our HR team.</p>
+          </article>
+          <article class="land-feature" data-reveal>
+            <span class="land-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+            <h3 data-i18n="landing.f2t">Fast to complete</h3>
+            <p data-i18n="landing.f2d">A seven-step guided form with autosave, so you can continue where you left off.</p>
+          </article>
+          <article class="land-feature" data-reveal>
+            <span class="land-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+            <h3 data-i18n="landing.f3t">Works everywhere</h3>
+            <p data-i18n="landing.f3d">Fully responsive on desktop, tablet and mobile — the same premium experience.</p>
+          </article>
+          <article class="land-feature" data-reveal>
+            <span class="land-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg></span>
+            <h3 data-i18n="landing.f4t">Track your reference</h3>
+            <p data-i18n="landing.f4d">After submission you receive a reference number for any future enquiries.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORM VIEW ============ -->
+    <section class="view container" id="view-form" hidden>
+      <!-- Stepper -->
+      <nav class="stepper" aria-label="Application progress">
+        <ol class="stepper-list">
+          <li class="step-item" data-step="1"><span class="step-num">1</span><span class="step-name" data-i18n="step.personal">Personal</span></li>
+          <li class="step-item" data-step="2"><span class="step-num">2</span><span class="step-name" data-i18n="step.education">Education</span></li>
+          <li class="step-item" data-step="3"><span class="step-num">3</span><span class="step-name" data-i18n="step.languages">Languages</span></li>
+          <li class="step-item" data-step="4"><span class="step-num">4</span><span class="step-name" data-i18n="step.experience">Experience</span></li>
+          <li class="step-item" data-step="5"><span class="step-num">5</span><span class="step-name" data-i18n="step.skills">Skills</span></li>
+          <li class="step-item" data-step="6"><span class="step-num">6</span><span class="step-name" data-i18n="step.general">General</span></li>
+          <li class="step-item" data-step="7"><span class="step-num">7</span><span class="step-name" data-i18n="step.review">Review</span></li>
+        </ol>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Completion">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </nav>
+
+      <form id="apply-form" novalidate>
+        <!-- ============ STEP 1: PERSONAL ============ -->
+        <section class="step-panel" data-panel="1" aria-labelledby="p1-title">
+          <div class="section-head">
+            <span class="section-number">01</span>
+            <div>
+              <h2 class="section-title" id="p1-title" data-i18n="personal.title">Personal Information</h2>
+              <p class="section-sub" data-i18n="personal.sub">معلومات شخصية</p>
+            </div>
+          </div>
+
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label class="field-label" for="f-name"><span data-i18n="field.name">Name</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" data-required>
+              <p class="field-error" data-for="name" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-job"><span data-i18n="field.job">Job</span></label>
+              <input type="text" id="f-job" name="job" autocomplete="organization-title">
+              <p class="field-error" data-for="job" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-id"><span data-i18n="field.id">ID</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-id" name="id_number" class="ltr" autocomplete="off" data-required>
+              <p class="field-error" data-for="id_number" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-mobile"><span data-i18n="field.mobile">Mobile</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="f-mobile" name="mobile" class="ltr" autocomplete="tel" inputmode="tel" data-required>
+              <p class="field-error" data-for="mobile" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-email"><span data-i18n="field.email">Email</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="f-email" name="email" class="ltr" autocomplete="email" inputmode="email" data-required data-email>
+              <p class="field-error" data-for="email" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-dob"><span data-i18n="field.dob">Date of Birth</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="date" id="f-dob" name="date_of_birth" class="ltr" data-required data-date>
+              <p class="field-error" data-for="date_of_birth" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-nationality"><span data-i18n="field.nationality">Nationality</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-nationality" name="nationality" data-required>
+              <p class="field-error" data-for="nationality" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-marital"><span data-i18n="field.marital">Marital Status</span></label>
+              <select id="f-marital" name="marital_status">
+                <option value=""></option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
+              <p class="field-error" data-for="marital_status" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-address"><span data-i18n="field.address">Address</span></label>
+              <input type="text" id="f-address" name="address" autocomplete="street-address">
+              <p class="field-error" data-for="address" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-faculty"><span data-i18n="field.faculty">Faculty</span></label>
+              <input type="text" id="f-faculty" name="faculty">
+              <p class="field-error" data-for="faculty" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-graduation"><span data-i18n="field.graduation">Graduation Year</span></label>
+              <input type="text" id="f-graduation" name="graduation_year" class="ltr" inputmode="numeric">
+              <p class="field-error" data-for="graduation_year" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-grade"><span data-i18n="field.grade">Grade</span></label>
+              <input type="text" id="f-grade" name="grade">
+              <p class="field-error" data-for="grade" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-religion"><span data-i18n="field.religion">Religion</span></label>
+              <input type="text" id="f-religion" name="religion">
+              <p class="field-error" data-for="religion" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-home_tel"><span data-i18n="field.home_tel">Home Tel. #.</span></label>
+              <input type="tel" id="f-home_tel" name="home_tel" class="ltr" inputmode="tel">
+              <p class="field-error" data-for="home_tel" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-children"><span data-i18n="field.children">No. of Children</span></label>
+              <input type="text" id="f-children" name="no_of_children" class="ltr" inputmode="numeric">
+              <p class="field-error" data-for="no_of_children" hidden></p>
+            </div>
+            <div class="field">
+              <span class="field-label" id="car-label"><span data-i18n="field.car">Do you have a car?</span></span>
+              <div class="radio-group" role="radiogroup" aria-labelledby="car-label">
+                <label class="radio-option">
+                  <input type="radio" name="has_car" value="yes" data-bool="1"> <span>Yes</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="has_car" value="no" data-bool="0"> <span>No</span>
+                </label>
+              </div>
+              <p class="field-error" data-for="has_car" hidden></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ STEP 2: EDUCATION & TRAINING ============ -->
+        <section class="step-panel" data-panel="2" aria-labelledby="p2-title" hidden>
+          <div class="section-head">
+            <span class="section-number">02</span>
+            <div>
+              <h2 class="section-title" id="p2-title" data-i18n="education.title">Education</h2>
+              <p class="section-sub" data-i18n="education.sub">التعليم</p>
+            </div>
+          </div>
+          <p class="muted" data-i18n="education.hint">Courses — Qualifications obtained & date of certification.</p>
+
+          <div class="repeat-head">
+            <h3 class="repeat-title" data-i18n="education.title">Education</h3>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-add-course" data-i18n="add.course">Add Course</button>
+          </div>
+          <div class="repeat-list" id="education-list"></div>
+
+          <hr class="tech-divider">
+
+          <div class="section-head">
+            <span class="section-number">02b</span>
+            <div>
+              <h2 class="section-title" data-i18n="training.title">Additional Studies / Training</h2>
+              <p class="section-sub" data-i18n="training.sub">معلومات إضافية عن دراستك وتدريبك</p>
+            </div>
+          </div>
+          <div class="repeat-head">
+            <h3 class="repeat-title" data-i18n="training.title">Additional Studies / Training</h3>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-add-training" data-i18n="add.training">Add Training</button>
+          </div>
+          <div class="repeat-list" id="training-list"></div>
+        </section>
+
+        <!-- ============ STEP 3: LANGUAGE SKILLS ============ -->
+        <section class="step-panel" data-panel="3" aria-labelledby="p3-title" hidden>
+          <div class="section-head">
+            <span class="section-number">03</span>
+            <div>
+              <h2 class="section-title" id="p3-title" data-i18n="languages.title">Language Skills</h2>
+              <p class="section-sub" data-i18n="languages.sub">اللغات</p>
+            </div>
+          </div>
+          <p class="muted" data-i18n="languages.hint">Please clarify the linguistic level using A, B, C or D under each heading.</p>
+
+          <div class="level-legend">
+            <span class="lvl-chip" data-i18n="lvl.a">A</span><span data-i18n="lvl.a.desc">Native / bilingual standard</span>
+            <span class="lvl-chip" data-i18n="lvl.b">B</span><span data-i18n="lvl.b.desc">Fluent knowledge</span>
+            <span class="lvl-chip" data-i18n="lvl.c">C</span><span data-i18n="lvl.c.desc">Useful working knowledge</span>
+            <span class="lvl-chip" data-i18n="lvl.d">D</span><span data-i18n="lvl.d.desc">Slight knowledge</span>
+          </div>
+
+          <div class="lang-table-wrap card">
+            <table class="lang-table">
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="language.english">Language</th>
+                  <th scope="col" data-i18n="lang.spoken">Spoken</th>
+                  <th scope="col" data-i18n="lang.written">Written</th>
+                  <th scope="col" data-i18n="lang.comprehension">Comprehension</th>
+                  <th scope="col" data-i18n="lang.reading">Reading</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-lang="english">
+                  <th scope="row" data-i18n="language.english">English</th>
+                  <td data-grade="spoken"></td>
+                  <td data-grade="written"></td>
+                  <td data-grade="comprehension"></td>
+                  <td data-grade="reading"></td>
+                </tr>
+                <tr data-lang="french">
+                  <th scope="row" data-i18n="language.french">French</th>
+                  <td data-grade="spoken"></td>
+                  <td data-grade="written"></td>
+                  <td data-grade="comprehension"></td>
+                  <td data-grade="reading"></td>
+                </tr>
+                <tr data-lang="other">
+                  <th scope="row" data-i18n="language.other">Other</th>
+                  <td data-grade="spoken"></td>
+                  <td data-grade="written"></td>
+                  <td data-grade="comprehension"></td>
+                  <td data-grade="reading"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="field-error" data-for="language_skills" hidden></p>
+        </section>
+
+        <!-- ============ STEP 4: WORK EXPERIENCE ============ -->
+        <section class="step-panel" data-panel="4" aria-labelledby="p4-title" hidden>
+          <div class="section-head">
+            <span class="section-number">04</span>
+            <div>
+              <h2 class="section-title" id="p4-title" data-i18n="experience.title">Work Experience</h2>
+              <p class="section-sub" data-i18n="experience.sub">الخبرات العملية</p>
+            </div>
+          </div>
+          <div class="repeat-head">
+            <h3 class="repeat-title" data-i18n="experience.title">Work Experience</h3>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-add-experience" data-i18n="add.experience">Add Work Experience</button>
+          </div>
+          <div class="repeat-list" id="experience-list"></div>
+        </section>
+
+        <!-- ============ STEP 5: SKILLS ============ -->
+        <section class="step-panel" data-panel="5" aria-labelledby="p5-title" hidden>
+          <div class="section-head">
+            <span class="section-number">05</span>
+            <div>
+              <h2 class="section-title" id="p5-title" data-i18n="skills.title">Computer Skills & Engineering Software & Other Qualifications</h2>
+              <p class="section-sub" data-i18n="skills.sub">مهارات الكمبيوتر</p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label" for="f-computer_skills"><span data-i18n="skills.computer">Computer Skills & Engineering Software & Other Qualifications</span></label>
+            <textarea id="f-computer_skills" name="computer_skills" rows="6"></textarea>
+            <p class="field-hint" data-i18n="skills.computer">List your computer skills, engineering software and other qualifications.</p>
+            <p class="field-error" data-for="computer_skills" hidden></p>
+          </div>
+        </section>
+
+        <!-- ============ STEP 6: GENERAL ============ -->
+        <section class="step-panel" data-panel="6" aria-labelledby="p6-title" hidden>
+          <div class="section-head">
+            <span class="section-number">06</span>
+            <div>
+              <h2 class="section-title" id="p6-title" data-i18n="general.title">General Information</h2>
+              <p class="section-sub" data-i18n="general.sub">معلومات عامة</p>
+            </div>
+          </div>
+
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label class="field-label" for="f-position"><span data-i18n="general.position">Which position are you applying for?</span><span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-position" name="position_applying" data-required>
+              <p class="field-error" data-for="position_applying" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-salary"><span data-i18n="general.salary">Total salary range expected?</span></label>
+              <input type="text" id="f-salary" name="salary_expected" class="ltr">
+              <p class="field-error" data-for="salary_expected" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-available"><span data-i18n="general.available">When would you be available to start work?</span></label>
+              <input type="text" id="f-available" name="available_start">
+              <p class="field-error" data-for="available_start" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-last_salary"><span data-i18n="general.last_salary">Your last salary</span></label>
+              <input type="text" id="f-last_salary" name="last_salary" class="ltr">
+              <p class="field-error" data-for="last_salary" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field-label" id="location-label"><span data-i18n="general.location">Have you any restriction as to location now or in the future?</span></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="location-label">
+              <label class="radio-option">
+                <input type="radio" name="location_restriction" value="no" data-bool="0"> <span data-i18n="general.location.no">No, I am available to work anywhere</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="location_restriction" value="yes" data-bool="1"> <span data-i18n="general.location.yes">Yes, I have a restriction</span>
+              </label>
+            </div>
+            <p class="field-error" data-for="location_restriction" hidden></p>
+          </div>
+
+          <div class="declaration card">
+            <p class="declaration-text" data-i18n="general.declaration">I affirm the truth of all information given above and accept that at any time employment should the above mentioned information prove to be false or untrue, I would be liable to immediate dismissal without notice indemnity.</p>
+            <div class="form-grid cols-2">
+              <div class="field">
+                <label class="field-label" for="f-signature"><span data-i18n="field.signature">Signature</span><span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="f-signature" name="declaration_signature" data-required autocomplete="off">
+                <p class="field-error" data-for="declaration_signature" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="f-declaration-date"><span data-i18n="field.date">Date</span></label>
+                <input type="date" id="f-declaration-date" name="declaration_date" class="ltr" data-date>
+                <p class="field-error" data-for="declaration_date" hidden></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ STEP 7: REVIEW ============ -->
+        <section class="step-panel" data-panel="7" aria-labelledby="p7-title" hidden>
+          <div class="section-head">
+            <span class="section-number">07</span>
+            <div>
+              <h2 class="section-title" id="p7-title" data-i18n="review.title">Review Application</h2>
+              <p class="section-sub" data-i18n="review.sub">Review all sections before submitting. You can edit any section.</p>
+            </div>
+          </div>
+          <div id="review-body" aria-live="polite"></div>
+        </section>
+
+        <!-- Errors summary -->
+        <div id="error-summary" class="error-summary" role="alert" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-i18n="errors.title">Please review the highlighted fields.</span>
+        </div>
+      </form>
+
+      <!-- Sticky action bar -->
+      <div class="action-bar" role="group" aria-label="Form navigation">
+        <div class="container action-bar-inner">
+          <button type="button" class="btn btn-ghost" id="btn-back" data-i18n="back">Back</button>
+          <div class="action-progress">
+            <span class="action-pct mono" id="action-pct">0%</span>
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-next" data-i18n="next">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUCCESS VIEW ============ -->
+    <section class="view container" id="view-success" hidden aria-labelledby="success-title">
+      <div class="success-card card">
+        <div class="success-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+        </div>
+        <h1 id="success-title" data-i18n="success.title">Application Submitted</h1>
+        <p class="muted" data-i18n="success.sub">Thank you for your application.</p>
+        <div class="ref-box">
+          <span class="ref-label" data-i18n="success.ref">Your application reference number</span>
+          <strong class="ref-value mono" id="ref-value">—</strong>
+          <span class="ref-hint muted" data-i18n="success.ref.hint">Please save this reference number — you will need it for any future enquiries.</span>
+        </div>
+        <button type="button" class="btn btn-outline btn-lg" id="btn-again" data-i18n="success.back">Submit Another Application</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer site-footer" id="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand" data-reveal>
+        <div class="hero-logo">
+          <img src="/assets/img/logo.jpg" alt="Delta Hope" width="220" height="auto">
+        </div>
+        <p data-i18n="app.name">Employment Application System</p>
+        <p class="muted" data-i18n="footer.about">A secure bilingual application portal for candidates considering employment with our organization.</p>
+      </div>
+      <nav class="footer-col" aria-label="Access" data-reveal>
+        <h4 data-i18n="footer.access">Access</h4>
+        <ul>
+          <li><a href="/" data-i18n="start.apply">Start Application</a></li>
+          <li><a href="/admin/login">Admin Sign In</a></li>
+          <li><a href="/admin">Dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col" data-reveal>
+        <h4 data-i18n="footer.guidelines">Guidelines</h4>
+        <p data-i18n="footer.g1">All information is treated confidentially.</p>
+        <p data-i18n="footer.g2">Reference numbers are required for any enquiry.</p>
+        <p data-i18n="footer.g3">Applications are reviewed on merit.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© <span id="footer-year">2026</span> <span data-i18n="app.name">Employment Application System</span> · <span data-i18n="app.form.code">Form 127</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/apply.js"></script>
+  <script src="/assets/vendor/gsap.min.js"></script>
+  <script src="/assets/vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="/assets/js/hero.js"></script>
+</body>
+</html>

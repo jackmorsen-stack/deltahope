@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — Employment Application System</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230F172A'%3E%3Cpath d='M4 5h16v14H4z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/css/system.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="login-page">
+  <main class="login-card" aria-labelledby="login-title">
+    <div class="login-brand">
+      <span class="brand-mark"><img class="brand-img" src="/assets/img/logo.jpg" alt="Delta Hope" width="120" height="auto"></span>
+      <strong>Employment Application System</strong>
+    </div>
+
+    <h1 class="login-title" id="login-title">Admin Sign In</h1>
+    <p class="login-sub">Restricted access — HR personnel and administrators only.</p>
+
+    <div class="login-error" id="login-error" role="alert" hidden></div>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label class="field-label" for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="username" autofocus data-required>
+        <p class="field-error" data-for="username" hidden></p>
+      </div>
+      <div class="field">
+        <label class="field-label" for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" data-required>
+        <p class="field-error" data-for="password" hidden></p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-login">
+        Sign In
+      </button>
+    </form>
+  </main>
+
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/admin-login.js"></script>
+</body>
+</html>
