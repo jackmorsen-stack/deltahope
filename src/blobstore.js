@@ -32,13 +32,16 @@ export async function restoreDb() {
   try {
     const blob = await blobClient();
     if (!blob) return false;
-    const { list, download } = blob;
+    const { list } = blob;
     const res = await list({ prefix: BLOB_KEY, limit: 1 });
     const item = res.blobs && res.blobs[0];
     if (!item) return false;
-    const buf = await download(item.url);
+    // @vercel/blob v2 has no `download` helper — fetch the blob URL directly.
+    const dl = await fetch(item.downloadUrl || item.url);
+    if (!dl.ok) throw new Error(`blob fetch ${dl.status}`);
+    const buf = Buffer.from(await dl.arrayBuffer());
     fs.mkdirSync(path.dirname(config.dbFile), { recursive: true });
-    fs.writeFileSync(config.dbFile, Buffer.from(buf));
+    fs.writeFileSync(config.dbFile, buf);
     console.log('[blob] restored database from Vercel Blob');
     return true;
   } catch (err) {
