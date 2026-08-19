@@ -12,7 +12,7 @@
     "vercel-build": "node -e \"console.log('Vercel build complete')\""
   },
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",
